@@ -1,8 +1,21 @@
-// #1
-function print1to255() {
-    var num =1;
-    while (num <= 255){
-        console.log(num);
-        num = num + 1;
+// #1 - Get 1 to 255
+function Get_Array() {
+    var arr = [];
+    for (var i = 1; i < 256; i++){
+        arr.push(i);
     }
+    return arr;
 }
+Get_Array()
+
+//#2 - Sum Odd 5000
+function Sum_Odd_5000(){
+    var sum = 0;
+    for (var i = 1; i <= 5000; i++){
+        if(i % 2 == 1) {
+            sum = sum + i;
+        }
+    }
+    return sum;
+}
+Sum_Odd_5000()
