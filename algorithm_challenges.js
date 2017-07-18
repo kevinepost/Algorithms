@@ -19,3 +19,27 @@ function Sum_Odd_5000(){
     return sum;
 }
 Sum_Odd_5000()
+
+
+//Algorithms
+function IsPrime(num) {
+    for(var i = 2; i < num; i++) {
+        if(num % i == 0) {
+            return false;
+        }
+    }
+            return true;
+}
+IsPrime()
+
+function flexCount(lowNum, highNum, mult){
+    var lowNum = 4;
+    var highNum = 100;
+    var mult = 2;
+
+    for(var i = highNum; i >= lowNum; i -mult)
+    {
+        console.log(i);
+    }
+}
+flexCount()
