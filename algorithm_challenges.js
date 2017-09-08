@@ -1,4 +1,4 @@
-// #1 - Get 1 to 255
+///////////// #1 - Get 1 to 255
 function Get_Array() {
     var arr = [];
     for (var i = 1; i < 256; i++){
@@ -8,7 +8,7 @@ function Get_Array() {
 }
 Get_Array()
 
-//#2 - Sum Odd 5000
+//////////////#2 - Sum Odd 5000
 function Sum_Odd_5000(){
     var sum = 0;
     for (var i = 1; i <= 5000; i++){
@@ -21,7 +21,7 @@ function Sum_Odd_5000(){
 Sum_Odd_5000()
 
 
-//Algorithms
+/////////////////////Algorithms
 function IsPrime(num) {
     for(var i = 2; i < num; i++) {
         if(num % i == 0) {
@@ -32,6 +32,8 @@ function IsPrime(num) {
 }
 IsPrime()
 
+
+//////////////////////flexCount
 function flexCount(lowNum, highNum, mult){
     var lowNum = 4;
     var highNum = 100;
@@ -45,7 +47,7 @@ function flexCount(lowNum, highNum, mult){
 flexCount()
 
 
-//filter method
+///////////////////////////filter method
 const age = [22,33,45,65];
 const pos = age.filter(function(n){
 	return n>30;
@@ -53,7 +55,7 @@ const pos = age.filter(function(n){
 console.log(pos);
 
 
-//javascript promise
+/////////////////////////javascript promise
 var myProm = new Promise(function(resolve,reject){
 	let clean = true;
 	if(clean==true){
@@ -70,7 +72,7 @@ myProm.then(function(fromResolve){
 });
 
 
-//binary search
+//////////////////////////binary search
 var doSearch = function(array,targetV){
   var min =-1;
   var max = array.length+1;
@@ -93,7 +95,7 @@ var primes = [1,2,3,5,29];
 console.log(doSearch(primes, 2));
 
 
-// add two numbers with no + sign.
+////////////////////// add two numbers with no + sign.
 function noPlus(a,b){
 	if(b==0){
 		return a;
@@ -106,7 +108,7 @@ function noPlus(a,b){
 
 console.log(noPlus(10,2));
 
-// factorial
+///////////////////////////// factorial
 function factorial(n) {
   if (n === 0) {
     return 1;
@@ -118,8 +120,28 @@ function factorial(n) {
 
 document.write(factorial(5));
 
+///////////////////////////////Factorial
+function FirstFactorial(num) { 
 
-//palidrome
+  var factorial = 1;
+
+  for (var i = 1; i <= num; i++) {  
+    // multiply each number between 1 and num  
+    // factorial = 1 * 1 = 1
+    // factorial = 1 * 2 = 2
+    // factorial = 2 * 3 = 6
+    // factorial = 6 * 4 = 24
+    // ...
+    factorial = factorial * i;
+  }
+
+  return factorial;
+         
+}
+   
+FirstFactorial(4); 
+
+/////////////////////////////////palidrome
 function myFun(nums){
   for(var n=0;n<nums.length;n++){
     var startn = nums[n];
