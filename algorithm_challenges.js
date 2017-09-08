@@ -43,3 +43,92 @@ function flexCount(lowNum, highNum, mult){
     }
 }
 flexCount()
+
+
+//filter method
+const age = [22,33,45,65];
+const pos = age.filter(function(n){
+	return n>30;
+});
+console.log(pos);
+
+
+//javascript promise
+var myProm = new Promise(function(resolve,reject){
+	let clean = true;
+	if(clean==true){
+		resolve('good work!');
+	}else if(clean==false){
+		reject('too lazy!');
+	}
+});
+
+myProm.then(function(fromResolve){
+	alert(fromResolve);
+}).catch(function(fromReject){
+	alert(fromReject);
+});
+
+
+//binary search
+var doSearch = function(array,targetV){
+  var min =-1;
+  var max = array.length+1;
+  var guess;
+  var totalg =0;
+  while(min<=max){
+  	  totalg++;
+  	  guess=Math.floor((min+max)/2);
+  	  if(array[guess]===targetV){
+  	  	  console.log("guesses " + totalg);
+  	  	  return "index " + guess;
+  	  }else if(array[guess]<targetV){
+  	  	  min=guess+1;
+  	  }else{
+  	  	  max=guess-1;
+  	  }
+  }return -1;
+}
+var primes = [1,2,3,5,29];
+console.log(doSearch(primes, 2));
+
+
+// add two numbers with no + sign.
+function noPlus(a,b){
+	if(b==0){
+		return a;
+		}else{
+	  var ans = a^b;
+	  var car = (a&b) << 1;
+	}
+	return noPlus(ans,car);
+}
+
+console.log(noPlus(10,2));
+
+// factorial
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  
+  // This is it! Recursion!!
+  return n * factorial(n - 1);
+}
+
+document.write(factorial(5));
+
+
+//palidrome
+function myFun(nums){
+  for(var n=0;n<nums.length;n++){
+    var startn = nums[n];
+    var endn = nums[nums.length - n - 1];
+    if(startn != endn){
+      return false + ' ' + startn + ', ' + endn;
+      //return nums[0];
+    }
+  }
+      return true + ' ' + startn + ', ' + endn;
+}
+document.write(myFun('tacocat'));
